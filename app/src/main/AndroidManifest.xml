@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.matih.auctionsystem" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:label="@string/app_launcher_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name=".Activities.AuctionItemDetailActivity"
+            android:label="@string/title_activity_auction_item_detail" >
+        </activity>
+        <activity
+            android:name=".Activities.NewItemActivity"
+            android:label="@string/title_activity_new_item" >
+        </activity>
+        <receiver android:name=".Managers.ReceiverBot"></receiver>
+    </application>
+</manifest>

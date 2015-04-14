@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.matih.auctionsystem.Activities.NewItemActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_New_Pic"
+        android:background="@drawable/aution_current"
+        android:adjustViewBounds="false"
+        android:layout_centerHorizontal="true"
+        android:minHeight="100dp"
+        android:minWidth="150dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout_New_ItemName"
+        android:layout_below="@+id/imageView_New_Pic"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_new_item_name"
+            android:id="@+id/textView2"
+            android:minWidth="100dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_New_ItemName"
+            android:textSize="18sp"
+            android:hint="@string/hint_new_item_name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout_New_ItemDesc"
+        android:layout_below="@+id/linearLayout_New_ItemName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_new_item_desc"
+            android:id="@+id/textView3"
+            android:minWidth="100dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_New_ItemDesc"
+            android:inputType="textImeMultiLine"
+            android:textSize="18sp"
+            android:hint="@string/hint_item_new_desc"
+            android:minLines="4"
+            android:maxLines="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout_New_ItemPrice"
+        android:layout_below="@+id/linearLayout_New_ItemDesc">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_new_price"
+            android:id="@+id/textView4"
+            android:minWidth="100dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_New_ItemPrice"
+            android:inputType="numberDecimal"
+            android:textSize="18sp"
+            android:hint="12.00" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_new_post"
+        android:id="@+id/button_New_Post"
+        android:layout_below="@+id/linearLayout_New_ItemPrice"
+        android:layout_alignRight="@+id/linearLayout_New_ItemPrice"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout_New_ItemPrice">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_new_set_time"
+            android:id="@+id/button_New_SetTime"
+            android:layout_below="@+id/linearLayout_New_ItemPrice"
+            android:layout_marginTop="20dp"
+            android:layout_alignRight="@+id/button_New_SetDate"
+            android:layout_alignLeft="@+id/button_New_SetDate" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_new_set_date"
+            android:id="@+id/button_New_SetDate"
+            android:layout_below="@+id/button_New_SetTime"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_new_post_expiry"
+            android:id="@+id/textView5"
+            android:paddingTop="10dp"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+</RelativeLayout>

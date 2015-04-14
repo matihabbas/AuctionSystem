@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_auction_item"
+        android:focusableInTouchMode="false"
+        android:src="@drawable/aution_current"
+        android:padding="10dp" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView_auction_item"
+        android:layout_alignBottom="@+id/imageView_auction_item"
+        android:layout_alignTop="@+id/imageView_auction_item"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:id="@+id/textView_cell_item_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Description"
+            android:id="@+id/textView_cell_item_description"
+            android:layout_below="@+id/textView_cell_item_name"
+            android:layout_above="@+id/textView_cell_item_price" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$1.00"
+            android:id="@+id/textView_cell_item_price"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Left"
+            android:id="@+id/textView_cell_timeLeft"
+            android:layout_alignBottom="@+id/textView_cell_item_price"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imageView_auction_item"
+        android:background="#ffc2c2c2"></RelativeLayout>
+</RelativeLayout>
