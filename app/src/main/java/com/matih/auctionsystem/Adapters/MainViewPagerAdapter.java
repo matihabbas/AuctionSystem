@@ -28,6 +28,11 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
         return tabElements.size();
     }
 
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return tabElements.get(position).getName();
+    }
+
     public void setTabElements(ArrayList<TabElement> tabElements) {
         this.tabElements = tabElements;
     }
